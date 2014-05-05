@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ChimpyQuest</title>
+
+	<style>
+		*,
+		*:after,
+		*:before {
+		  margin: 0;
+		  padding: 0;
+		  -webkit-box-sizing: border-box;
+		     -moz-box-sizing: border-box;
+		          box-sizing: border-box;
+		}
+
+		body {
+			padding: 10px;
+			background: url(princess_tiia.png) fixed no-repeat bottom left;
+			background-color: black;
+		}
+
+		.container {
+			width: 800px;
+			height: 530px;
+			margin: auto;
+	  	position: absolute;
+	  	top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+
+		.terminal-window {
+			width: 100%;
+			height: 95%;
+			overflow-y: scroll;
+			font-family: 'Cutive Mono', monospace;
+			font-size: 14px;
+			background: black;
+			color: #ccc;
+			padding: 5px;
+			border: 1px solid rgb(255, 48, 147);
+		}
+
+		.exits {
+			color: white;
+			font-weight: bold;
+		}
+
+		.command-input-container {
+			color: rgb(255, 48, 147);
+			border: 1px solid rgb(255, 48, 147);
+			border-top: 0;
+			background: black;
+		}
+
+		.command-input {
+			width: 95%;
+			background: black;
+			font-family: 'Cutive Mono', monospace;
+			font-size: 14px;
+			color: rgb(255, 48, 147);
+			padding: 5px;
+			border: 0;
+		}
+
+		.command-input:focus {
+		    outline: 0;
+		}
+
+		.npc {
+			color: rgb(195, 196, 0);
+		}
+
+		.item {
+			color: green;
+		}
+
+		.red {
+			color: red;
+		}
+
+		.green {
+			color: green;
+		}
+
+		.input {
+			color: #696;
+		}
+
+		.msg {
+			padding-bottom: 10px;
+		}
+
+		.text-left {
+			text-align: left;
+		}
+
+		.text-right {
+			text-align: right;
+		}
+
+		*[class*="col-"] {
+			display: block;
+			float: left;
+		}
+
+		.col-1 { width: 8.333333333333% }
+		.col-2 { width: 16.666666666666% }
+		.col-3 { width: 24.999999999999% }
+		.col-4 { width: 33.333333333332% }
+		.col-5 { width: 41.666666666665% }
+		.col-6 { width: 49.999999999998% }
+		.col-7 { width: 58.333333333331% }
+		.col-8 { width: 66.666666666664% }
+		.col-9 { width: 74.999999999997% }
+		.col-10 { width: 83.33333333333% }
+		.col-11 { width: 91.666666666667% }
+		.col-12 { width: 100%; }
+
+		.row {
+			display: block;
+			width: 100%;
+		}
+
+		/* Clearfix */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		h1 {
+			color: rgb(255, 48, 147);
+			text-align: center;
+			font-family: "Terminal", "VT-100", monospace;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<h1>ChimpyQuest!</h1>
+		<div class="terminal-window"></div>
+
+		<div class="command-input-container">
+			<span class="prompt">&gt;</span>
+			<input class="command-input" type="text"/>
+		</div>
+	</div>
+
+	<script src="js/app.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			app.main();
+		});
+	</script>
+
+</body>
+</html>
